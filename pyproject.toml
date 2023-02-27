@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "avtocalc"
+name = "autocalc"
 version = "0.1.0"
 description = "Avtomatize DPD calculations"
 authors = ["Ivan Mikhailov, Pavel Semishin, Serafim <mikhailov.ivan@gmail.com>"]
@@ -12,6 +12,11 @@ python = "^3.10"
 [tool.poetry.group.dev.dependencies]
 autopep8 = "^2.0.1"
 pytest = "^7.2.1"
+coverage = "^7.2.1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "src"] 
+
 
 [build-system]
 requires = ["poetry-core"]

@@ -31,4 +31,7 @@ class Contr:
 def cp_from_to(dir1: str, dir2: str, file: str) -> None:
     ''' Copy file from dir1 to dir2 '''
     path: str = os.path.join(dir1, file)
+    if not os.path.isfile(path):
+        raise Exception(str(f'{path} not found'))
     os.system(f'cp {path} {dir2}')
+   
